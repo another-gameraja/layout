@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+
+}
+.container{
+    color: white;
+    background:linear-gradient(to right ,rgb(3, 179, 56) , rgb(5, 49, 137));
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 20px;
+
+    
+}
+.text-box{
+flex-basis: 50%;
+
+
+}
+.heading{
+    margin: 10px;
+    padding: 10px;
+    font-size: 2.2rem;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+}
+.subheading{
+    margin-top: -5px;
+    margin: 10px;
+    padding: 2px;
+   
+    text-align: center;
+    font-size: 1.3rem;
+}
+.gallery-box{
+
+  align-self: center;
+ width: 50%;
+margin: 5px;
+padding: 2px;
+height: 50vh;
+
+    
+}
+.box{
+
+   margin: 5px;
+    padding: 2px;
+    /* height: 200px; */
+    box-shadow: 0 0 0 4px rgb(230, 230, 223);
+}
+.box:hover{
+cursor: pointer;
+background-position: bottom;
+transition: 2s;
+width: 95%;
+margin-inline: auto;
+background-color:rgb(172, 111, 111);
+
+}
+
+
+/*  now time to work with media qwery */
+@media screen and (min-width:450px) {
+ 
+    
+    .container{
+        color: white;
+        background:linear-gradient(to right ,rgb(3, 179, 56) , rgb(5, 49, 137));
+        min-height: 100vh;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        align-items: center;
+        gap: 20px;
+       
+    }
+    
+      .text-box{
+        flex-basis: 30%;   
+      }  
+      .gallery-box{
+      
+   /* flex-basis: 40%; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    
+    }
+      .box{
+        background-size:cover;
+        background-color: rgb(68, 167, 206);
+        background-blend-mode:multiply;
+        box-shadow: 0 0 8px rgb(210, 205, 205);
+      }
+      .col-c{
+       grid-column: span 2 ; 
+      }
+      .row-c{
+        grid-row: span 2 ;
+      }
+      .col-row{
+        grid-area: span 2/span 2;
+      }
+      .box:hover{
+        cursor: pointer;
+        background-position: bottom;
+        transition: 2s;
+        width: 98%;
+        margin-inline: auto;
+        background-color:rgb(172, 111, 111);
+        box-shadow:  0px 0px 0px 6px rgb(58, 52, 52);
+      } 
+    }
+
+
